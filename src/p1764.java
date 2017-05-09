@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+
 
 /**
  * Test version
@@ -15,32 +18,33 @@ public class p1764 {
         sc.nextLine();
 
         String[] names = new String[case_a];
-        List list = new LinkedList();
-        Map mapA = new HashMap();
+        List listA = new ArrayList();
+        List listB = new ArrayList();
+        List listC = new ArrayList();
 
-        for (int i = 0; i < case_a + case_b; i++) {
+        for (int i = 0; i < case_a; i++) {
             String name = sc.nextLine();
 
-            if (i < case_a) { // N범위동안
-                mapA.put(name, i);
-                names[i] = name;
-            } else {
-                if (i != case_a) { // N+1이 아닐 떄(N+2이상)
-                    for (int j = 0; j < case_a; j++) {
-                        if (name.equals(names[j])) {
-                            list.add(names[j]);
-                            sum++;
-                            break;
-                        }
-                    }
-                }
-                if (i == case_a + case_b) {
-                    System.out.println(sum);
+            listA.add(name);
+        }
 
-                    for (int j = 0; j < sum; j++)
-                        System.out.println(list.get(j));
-                }
+        for (int i = 0; i < case_b; i++) {
+            String name = sc.nextLine();
+
+            if(i!=0)
+            listB.add(name);
+        }
+
+        for(int i=0; i<case_b; i++) {
+            if(listB.get(i).equals(listA.get(i))) {
+                listC.add(listA.get(i));
             }
+        }
+
+        System.out.println(listC.size());
+
+        for(int i=0; i<listC.size(); i++) {
+            System.out.println(listC.get(i));
         }
     }
 }
