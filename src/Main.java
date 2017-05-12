@@ -5,8 +5,9 @@ import java.util.Scanner;
  * Created by user on 2017-05-11.
  */
 public class Main {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int count = sc.nextInt();
+		int n = sc.nextInt();
 	}
 }
