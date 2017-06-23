@@ -1,8 +1,6 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
-public class Main {
+public class p2475 {
 	/**
 	 * l2jong insedu (2017-06-23)
 	 */
